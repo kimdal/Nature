@@ -17,10 +17,11 @@ let engine;
 let ground;
 //let balls;
 let boxes;
-
+let GrounfWater;
 
 function setup() {
   const canvas = createCanvas(635, 800);
+  let GroundWater = new GW();
 
   // create an engine
   engine = Engine.create();
