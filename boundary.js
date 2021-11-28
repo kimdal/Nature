@@ -29,7 +29,7 @@ class Boundary {
 
   // Draw the boundary, if it were at an angle we'd have to do something fancier
   display() {
-    fill(127);
+   noFill();
     stroke(0);
     rectMode(CENTER);
     rect(this.x, this.y, this.w, this.h);
