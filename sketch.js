@@ -20,15 +20,15 @@ let boxes;
 
 
 function setup() {
-  const canvas = createCanvas(500, 800);
+  const canvas = createCanvas(635, 800);
 
   // create an engine
   engine = Engine.create();
 
   // add boxes
   // xx, yy, columns, rows, columnGap, rowGap
-  boxes = Composites.stack(200, 0, 3, 10, 3, 3, function(x, y) {
-    return Bodies.rectangle(x, y, 50, 50);
+  boxes = Composites.stack(1, 0, 28, 20, 3, 3, function(x, y) {
+    return Bodies.rectangle(x, y, 20, 20);
   });
   // add balls
   //balls = Composites.stack(500, 0, 2, 5, 3, 3, function(x, y) {
