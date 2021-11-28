@@ -1,2 +1,2 @@
-# Nature
-Nature Project
+# Nature Project
+'Nature' Project of DIA Programming Class
