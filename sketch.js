@@ -12,21 +12,23 @@ let boundaries = [];
 let boxes = [];
 
 function setup() {
-  createCanvas(640, 360);
+  createCanvas(300, 500);
 
   // Initialize box2d physics and create the world
   world = createWorld();
 
   // Add a bunch of fixed boundaries
-  boundaries.push(new Boundary(width / 4, height - 5, width / 2 - 50, 10));
+  boundaries.push(new Boundary(width / 2, height - 5, width, 10));
   boundaries.push(new Boundary(3 * width / 4, height - 50, width / 2 - 50, 10));
+  boundaries.push(new Boundary(0, height/2, 20, height));
+  boundaries.push(new Boundary(298, height/2, 20, height));
 
   let b = new Box(width / 2, 30);
   boxes.push(b);
 }
 
 function draw() {
-  background(51);
+  background(0, 50, 100);
 
   // We must always step through time!
   let timeStep = 1.0 / 30;
