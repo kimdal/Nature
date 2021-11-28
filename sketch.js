@@ -13,7 +13,6 @@ let boxes = [];
 
 function setup() {
   createCanvas(300, 500);
-
   // Initialize box2d physics and create the world
   world = createWorld();
 
@@ -28,7 +27,7 @@ function setup() {
 }
 
 function draw() {
-  background(0, 50, 100);
+  background(0, 0, 50);
 
   // We must always step through time!
   let timeStep = 1.0 / 30;
