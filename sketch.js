@@ -31,7 +31,7 @@ function setup() {
   let b = new Box(width / 2, 30);
   boxes.push(b);
 
-  Slider = createSlider(5, 15, 100);
+  Slider = createSlider(5, 15, 3);
   Slider.position(85, 20);
 }
 
