@@ -11,7 +11,7 @@ let boundaries = [];
 // A list for all of our rectangles
 let boxes = [];
 
-let Slider;
+let ScaleSlider;
 
 function setup() {
   createCanvas(300, 600);
@@ -22,6 +22,7 @@ function setup() {
   boundaries.push(new Boundary(width / 2, height - 5, width, 10));
   boundaries.push(new Boundary(0, height/2, 20, height));
   boundaries.push(new Boundary(298, height/2, 20, height));
+
   boundaries.push(new Boundary(250, height - 50, width / 2 - 50, 80));
   boundaries.push(new Boundary(50, 100, width / 2 - 50, 30));
   boundaries.push(new Boundary(200, height/2, 50, 80));
@@ -31,13 +32,13 @@ function setup() {
   let b = new Box(width / 2, 30);
   boxes.push(b);
 
-  Slider = createSlider(5, 15, 3);
-  Slider.position(85, 20);
+  ScaleSlider = createSlider(5, 15, 3);
+  ScaleSlider.position(10, 20);
 }
 
 function draw() {
   background(0, 0, 50);
-let S = Slider.value();
+let SS = ScaleSlider.value();
 
 
   // We must always step through time!
@@ -47,7 +48,7 @@ let S = Slider.value();
 
   // Boxes fall from the top every so often
   if (random(1) < 0.2) {
-    let b = new Box(width/2, 30, S);
+    let b = new Box(width/2, 30, SS);
     boxes.push(b);
   }
 
