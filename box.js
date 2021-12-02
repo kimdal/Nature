@@ -7,10 +7,10 @@
 
 // Constructor
 class Box {
-  constructor(x, y) {
-  
-    this.w = random(3, 5);
-    this.h = random(5, 50);
+  constructor(x, y, r) {
+    //this.w = random(3, 5);
+    //this.h = random(5, 50);
+    this.r = r;
 
     // Define a body
     let bd = new box2d.b2BodyDef();
@@ -21,7 +21,7 @@ class Box {
     let fd = new box2d.b2FixtureDef();
     // Fixture holds shape
     fd.shape = new box2d.b2PolygonShape();
-    fd.shape.SetAsBox(scaleToWorld(this.w / 2), scaleToWorld(this.h / 2));
+    fd.shape.SetAsBox(scaleToWorld(this.r), scaleToWorld(this.r));
 
     // Some physics
     fd.density = 1.0;
@@ -48,7 +48,8 @@ class Box {
     // Let's find the screen position of the particle
     let pos = scaleToPixels(this.body.GetPosition());
     // Is it off the bottom of the screen?
-    if (pos.y > height + this.w * this.h) {
+    // if (pos.y > height + this.w * this.h) {
+      if (pos.y > height + this.r) {
       this.killBody();
       return true;
     }
@@ -70,7 +71,7 @@ class Box {
     fill(10, random(10, 100),random(10, 150));
     noStroke();
     strokeWeight(2);
-    rect(0, 0, this.w, this.h);
+    rect(0, 0, this.r, this.r);
     pop();
   }
 }
