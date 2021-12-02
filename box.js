@@ -12,6 +12,8 @@ class Box {
     //this.h = random(5, 50);
     this.r = r;
 
+    this.c = color(10, random(10, 100),random(10, 150));
+
     // Define a body
     let bd = new box2d.b2BodyDef();
     bd.type = box2d.b2BodyType.b2_dynamicBody;
@@ -68,10 +70,11 @@ class Box {
     push();
     translate(pos.x, pos.y);
     rotate(a);
-    fill(10, random(10, 100),random(10, 150));
+    fill(this.c);
     noStroke();
     strokeWeight(2);
     rect(0, 0, this.r, this.r);
     pop();
-  }
+
+}
 }
