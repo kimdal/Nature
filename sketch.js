@@ -31,7 +31,7 @@ function setup() {
   let b = new Box(width / 2, 30);
   boxes.push(b);
 
-  Slider = createSlider(10, 255, 100);
+  Slider = createSlider(5, 15, 100);
   Slider.position(85, 20);
 }
 
@@ -47,7 +47,7 @@ let S = Slider.value();
 
   // Boxes fall from the top every so often
   if (random(1) < 0.2) {
-    let b = new Box(S, 30);
+    let b = new Box(width/2, 30, S);
     boxes.push(b);
   }
 
