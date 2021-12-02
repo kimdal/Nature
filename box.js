@@ -8,8 +8,8 @@
 // Constructor
 class Box {
   constructor(x, y) {
-    this.w = random(3, 40);
-    this.h = random(3, 40);
+    this.w = random(3, 5);
+    this.h = random(5, 70);
 
     // Define a body
     let bd = new box2d.b2BodyDef();
@@ -66,7 +66,7 @@ class Box {
     push();
     translate(pos.x, pos.y);
     rotate(a);
-    fill(10, 100, 150);
+    fill(10, random(10, 100),random(10, 150));
     noStroke();
     strokeWeight(2);
     rect(0, 0, this.w, this.h);

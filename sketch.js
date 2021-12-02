@@ -12,15 +12,19 @@ let boundaries = [];
 let boxes = [];
 
 function setup() {
-  createCanvas(300, 500);
+  createCanvas(300, 600);
   // Initialize box2d physics and create the world
   world = createWorld();
 
   // Add a bunch of fixed boundaries
   boundaries.push(new Boundary(width / 2, height - 5, width, 10));
-  boundaries.push(new Boundary(3 * width / 4, height - 50, width / 2 - 50, 10));
   boundaries.push(new Boundary(0, height/2, 20, height));
   boundaries.push(new Boundary(298, height/2, 20, height));
+  boundaries.push(new Boundary(250, height - 50, width / 2 - 50, 80));
+  boundaries.push(new Boundary(50, 100, width / 2 - 50, 30));
+  boundaries.push(new Boundary(200, height/2, 50, 80));
+  boundaries.push(new Boundary(270, 150, 50, 30));
+  boundaries.push(new Boundary(40, 370, 150, 150));
 
   let b = new Box(width / 2, 30);
   boxes.push(b);
