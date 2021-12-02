@@ -11,6 +11,8 @@ let boundaries = [];
 // A list for all of our rectangles
 let boxes = [];
 
+let Slider;
+
 function setup() {
   createCanvas(300, 600);
   // Initialize box2d physics and create the world
@@ -28,10 +30,15 @@ function setup() {
 
   let b = new Box(width / 2, 30);
   boxes.push(b);
+
+  Slider = createSlider(10, 255, 100);
+  Slider.position(85, 20);
 }
 
 function draw() {
   background(0, 0, 50);
+let S = Slider.value();
+
 
   // We must always step through time!
   let timeStep = 1.0 / 30;
@@ -40,7 +47,7 @@ function draw() {
 
   // Boxes fall from the top every so often
   if (random(1) < 0.2) {
-    let b = new Box(width / 2, 30);
+    let b = new Box(S, 30);
     boxes.push(b);
   }
 

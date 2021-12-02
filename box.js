@@ -8,8 +8,9 @@
 // Constructor
 class Box {
   constructor(x, y) {
+  
     this.w = random(3, 5);
-    this.h = random(5, 70);
+    this.h = random(5, 50);
 
     // Define a body
     let bd = new box2d.b2BodyDef();
