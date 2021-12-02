@@ -46,9 +46,9 @@ let SS = ScaleSlider.value();
 let MS = MoveSlider.value();
 
   // We must always step through time!
-  let timeStep = 1.0 / 10;
+  let timeStep = 1.0 / 80;
   // 2nd and 3rd arguments are velocity and position iterations
-  world.Step(timeStep, 100, 10);
+  world.Step(timeStep, 10, 10);
 
   // Boxes fall from the top every so often
   if (random(1) < 0.2) {
