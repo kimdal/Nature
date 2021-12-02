@@ -12,7 +12,7 @@ class Box {
     //this.h = random(5, 50);
     this.r = r;
 
-    this.c = color(10, random(10, 100),random(10, 150));
+    this.c = color(255);
 
     // Define a body
     let bd = new box2d.b2BodyDef();
@@ -75,6 +75,13 @@ class Box {
     strokeWeight(2);
     rect(0, 0, this.r, this.r);
     pop();
+
+    if (pos.y > height/2){
+      this.c = color(random(0, 255), random(0, 255), 0);
+    }
+    if (pos.x > width/2){
+      this.c = color(random(0, 255), random(0, 255), random(0, 255));
+    }
 
 }
 }
