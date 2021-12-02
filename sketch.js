@@ -46,9 +46,9 @@ let SS = ScaleSlider.value();
 let MS = MoveSlider.value();
 
   // We must always step through time!
-  let timeStep = 1.0 / 30;
+  let timeStep = 1.0 / 10;
   // 2nd and 3rd arguments are velocity and position iterations
-  world.Step(timeStep, 10, 10);
+  world.Step(timeStep, 100, 10);
 
   // Boxes fall from the top every so often
   if (random(1) < 0.2) {
@@ -68,4 +68,12 @@ let MS = MoveSlider.value();
       boxes.splice(i, 1);
     }
   }
+  // function keyPressed(){
+  //   if (keyCode === 32){
+  //     // boxes,
+  //     // {x:boxes.x, y:boxes.y},
+  //     // {x:0.01, y: -0.1}
+  //   };
+  // }
+
 }
