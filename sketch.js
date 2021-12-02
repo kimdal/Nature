@@ -12,6 +12,7 @@ let boundaries = [];
 let boxes = [];
 
 let ScaleSlider;
+let MoveSlider;
 
 function setup() {
   createCanvas(300, 600);
@@ -34,12 +35,15 @@ function setup() {
 
   ScaleSlider = createSlider(5, 15, 3);
   ScaleSlider.position(10, 20);
+
+  MoveSlider = createSlider(0, 300, 150);
+  MoveSlider.position(150, 20);
 }
 
 function draw() {
   background(0, 0, 50);
 let SS = ScaleSlider.value();
-
+let MS = MoveSlider.value();
 
   // We must always step through time!
   let timeStep = 1.0 / 30;
@@ -48,7 +52,7 @@ let SS = ScaleSlider.value();
 
   // Boxes fall from the top every so often
   if (random(1) < 0.2) {
-    let b = new Box(width/2, 30, SS);
+    let b = new Box(MS, 30, SS);
     boxes.push(b);
   }
 
