@@ -69,7 +69,7 @@ class Box {
     rectMode(CENTER);
     push();
     translate(pos.x, pos.y);
-    translate(p5.Vector.fromAngle(millis() / 200, 10));
+    //translate(p5.Vector.fromAngle(millis() / 200, 10));
 
     rotate(a);
     fill(this.c);
@@ -84,6 +84,8 @@ class Box {
     if (pos.x > width/2){
       this.c = color(random(0, 255), random(0, 255), random(0, 255));
     }
-
+if (keyIsPressed === true){
+  translate(p5.Vector.fromAngle(millis() / 200, 10));
+}
 }
 }
