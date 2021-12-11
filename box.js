@@ -69,7 +69,7 @@ class Box {
     rectMode(CENTER);
     push();
     translate(pos.x, pos.y);
-    translate(p5.Vector.fromAngle(millis() / 1000, 40));
+    translate(p5.Vector.fromAngle(millis() / 200, 10));
 
     rotate(a);
     fill(this.c);
