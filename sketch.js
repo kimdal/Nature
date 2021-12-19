@@ -68,12 +68,4 @@ let MS = MoveSlider.value();
       boxes.splice(i, 1);
     }
   }
-  // function keyPressed(){
-  //   if (keyCode === 32){
-  //     // boxes,
-  //     // {x:boxes.x, y:boxes.y},
-  //     // {x:0.01, y: -0.1}
-  //   };
-  // }
-
 }
