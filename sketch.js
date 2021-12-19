@@ -14,6 +14,12 @@ let boxes = [];
 let ScaleSlider;
 let MoveSlider;
 
+let Sound;
+
+function preload(){
+  Sound = loadSound('Clock.mp3');
+}
+
 function setup() {
   createCanvas(300, 600);
   // Initialize box2d physics and create the world
@@ -68,12 +74,11 @@ let MS = MoveSlider.value();
       boxes.splice(i, 1);
     }
   }
-  // function keyPressed(){
-  //   if (keyCode === 32){
-  //     // boxes,
-  //     // {x:boxes.x, y:boxes.y},
-  //     // {x:0.01, y: -0.1}
-  //   };
-  // }
-
+if (keyIsPressed === true){
+if (keyCode === 32){
+  Sound.play();
+} else {
+  Sound.stop();
+}
+}
 }
