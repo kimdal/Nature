@@ -11,6 +11,7 @@ class Boundary {
     this.y = y;
     this.w = w;
     this.h = h;
+    this.change = 150;
 
     let fd = new box2d.b2FixtureDef();
     fd.density = 1.0;
@@ -26,10 +27,14 @@ class Boundary {
     fd.shape.SetAsBox(this.w / (scaleFactor * 2), this.h / (scaleFactor * 2));
     this.body = world.CreateBody(bd).CreateFixture(fd);
   }
+update(){
+  this.change -= 0.3;
 
+}
   // Draw the boundary, if it were at an angle we'd have to do something fancier
   display() {
-   noFill();
+   //noFill();
+   fill(0, 3, 10, this.change);
     noStroke(0);
     //stroke(255);
     rectMode(CENTER);
