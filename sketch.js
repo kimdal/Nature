@@ -34,10 +34,10 @@ function setup() {
   boxes.push(b);
 
   ScaleSlider = createSlider(5, 15, 3);
-  ScaleSlider.position(10, 20);
+  ScaleSlider.position(10, 150);
 
   MoveSlider = createSlider(0, 300, 150);
-  MoveSlider.position(150, 20);
+  MoveSlider.position(150, 150);
 }
 
 function draw() {
