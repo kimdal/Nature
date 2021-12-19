@@ -79,8 +79,7 @@ let MS = MoveSlider.value();
 if (keyIsPressed === true){
 if (keyCode === 32){
   Sound.play();
-} else {
-  Sound.stop();
-}
+  boxes[i].Move()
+  }
 }
 }
