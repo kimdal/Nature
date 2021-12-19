@@ -22,6 +22,8 @@ function preload(){
 
 function setup() {
   createCanvas(300, 600);
+  Sound.loop();
+
   // Initialize box2d physics and create the world
   world = createWorld();
 
