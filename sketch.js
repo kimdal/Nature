@@ -59,6 +59,7 @@ let MS = MoveSlider.value();
   // Display all the boundaries
   for (let i = 0; i < boundaries.length; i++) {
     boundaries[i].display();
+    boundaries[i].update();
   }
 
   // Display all the boxes
