@@ -84,8 +84,11 @@ class Box {
     if (pos.x > width/2){
       this.c = color(random(0, 255), random(0, 255), random(0, 255));
     }
-if (keyIsPressed === true){
-  translate(p5.Vector.fromAngle(millis() / 200, 10));
+// if (keyIsPressed === true){
+//   translate(p5.Vector.fromAngle(millis() / 200, 10));
+// }
 }
+Move(){
+translate(p5.Vector.fromAngle(millis() / 200, 10));
 }
 }
